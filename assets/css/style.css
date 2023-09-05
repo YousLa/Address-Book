@@ -1,0 +1,17 @@
+* {
+    background-color: black;
+    color: whitesmoke;
+}
+
+table {
+    border-collapse: collapse;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+th,
+td {
+    border: 1px solid whitesmoke;
+    padding: 5px 10px;
+    width: 150px;
+}
