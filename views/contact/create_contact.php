@@ -1,6 +1,9 @@
 <h1>Créer un contacte</h1>
 
-<form action="?page=createcontact" method="POST">
+<form action="?page=createcontact" method="POST" enctype="multipart/form-data">
+
+    <label for="image">Image :</label>
+    <input type="file" id="image" name="image" accept="image/jpeg, image/jpg, image/png">
 
     <label for="last_name">Nom :</label>
     <input type="text" name="last_name" id="last_name" required>
@@ -12,13 +15,13 @@
     <input type="text" name="pseudo" id="pseudo">
 
     <label for="phone_number"> Numéro de téléphone :</label>
-    <input type="date" name="phone_number" id="phone_number">
+    <input type="text" name="phone_number" id="phone_number">
 
     <label for="email">Adresse Email* :</label>
     <input type="email" name="email" id="email">
 
-    <label for="rue">Rue :</label>
-    <input type="text" name="rue" id="rue">
+    <label for="street_address">Rue :</label>
+    <input type="text" name="street_address" id="street_address">
 
     <label for="number_address">Numéro :</label>
     <input type="text" name="number_address" id="number_address">

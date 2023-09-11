@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
 
     include_once "models/database.php";
 
-    $query = "DELETE FROM person WHERE id = :id";
+    $query = "DELETE FROM contact WHERE id = :id";
     $options = array(
         ":id" => $id
     );
@@ -16,6 +16,6 @@ if (isset($_GET['id'])) {
     $objet = $database->prepare($query);
 
     if ($objet->execute($options)) {
-        header("Location: controllers/pages/contact.php");
+        header("Location: ?page=contactlist");
     }
 }

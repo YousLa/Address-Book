@@ -27,6 +27,10 @@ if (isset($_GET['page'])) {
             require_once 'controllers/contact/create_contact.php';
             break;
 
+        case 'update':
+            require_once 'controllers/contact/update_contact.php';
+            break;
+
         case 'delete':
             require_once 'controllers/contact/delete_contact.php';
             break;
@@ -44,5 +48,5 @@ if (isset($_GET['page'])) {
             break;
     }
 } else {
-    require_once 'controllers/home.php';
+    require_once 'controllers/pages/home.php';
 }

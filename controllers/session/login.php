@@ -29,11 +29,11 @@ if (isset($_POST['login'])) {
         $count = $objet->rowCount();
         $arrayResult = $objet->fetchAll(PDO::FETCH_ASSOC);
 
-
         if ($count > 0) {
 
             // Ajouter des variables session 
 
+            $_SESSION['id'] = $arrayResult[0]['id'];
             $_SESSION['email'] = $arrayResult[0]['email'];
             $_SESSION['last_name'] = $arrayResult[0]['last_name'];
             $_SESSION['first_name'] = $arrayResult[0]['first_name'];

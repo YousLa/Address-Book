@@ -20,8 +20,23 @@ foreach ($contacts as $contact) {
 
     # Extraction des données d'une personne dans une variable
     list(
-        $id, $last_name, $first_name, $pseudo, $phone_number, $email, $street_address, $number_address, $zip_address, $city_address, $user_id, $created_at, $updated_at
+        $id, $last_name, $first_name, $pseudo, $pic_name,  $pic_url, $phone_number, $email, $street_address, $number_address, $zip_address, $city_address, $user_id, $created_at, $updated_at
     ) = $contact;
+}
+
+// Parcourir les contes dans le tableau
+foreach ($contacts as $cle => $contact) {
+
+    // Extraction des données d'un conte dans une variable
+
+    $contact_row .= "<li class='contact_card'>";
+
+    $contact_row .= "<img src='" . $contact['pic_url'] . "'>";
+
+    $contact_row .= "<h2><a href='?page=contactcard&id=" . htmlspecialchars($contact['id']) . "'>" . $contact['last_name'] . " " . $contact['first_name'] . "</a></h2>";
+
+
+    $contact_row .= "</li>";
 }
 
 require_once 'views/pages/contact_list.php';
