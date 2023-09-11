@@ -3,9 +3,6 @@
 if (isset($_GET['page'])) {
 
     switch ($_GET['page']) {
-        case 'home':
-            require_once 'controllers/pages/home.php';
-            break;
 
         case 'login':
             require_once 'controllers/session/login.php';
@@ -48,5 +45,5 @@ if (isset($_GET['page'])) {
             break;
     }
 } else {
-    require_once 'controllers/pages/home.php';
+    require_once 'controllers/session/login.php';
 }

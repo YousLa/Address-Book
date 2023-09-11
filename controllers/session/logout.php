@@ -14,7 +14,7 @@ unset($_SESSION['updated_at']);
 
 session_destroy();
 
-header('Location: ?page=home');
+header('Location: ?page=login');
 
 ?>
 

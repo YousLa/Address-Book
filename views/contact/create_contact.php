@@ -1,36 +1,61 @@
-<h1>Créer un contacte</h1>
+<div class="container d-flex flex-column align-items-center gap-5">
 
-<form action="?page=createcontact" method="POST" enctype="multipart/form-data">
 
-    <label for="image">Image :</label>
-    <input type="file" id="image" name="image" accept="image/jpeg, image/jpg, image/png">
+    <h1>Créer un contacte</h1>
 
-    <label for="last_name">Nom :</label>
-    <input type="text" name="last_name" id="last_name" required>
+    <form class="col-md-6 " action="?page=createcontact" method="POST" enctype="multipart/form-data">
 
-    <label for="first_name">Prénom :</label required>
-    <input type="text" name="first_name" id="first_name">
+        <div class="mb-4 d-flex flex-row">
+            <label class="form-label me-4 col-4" for="image">Image :</label>
+            <input class="form-control" type="file" id="image" name="image" accept="image/jpeg, image/jpg, image/png">
+        </div>
 
-    <label for="pseudo">Pseudo :</label>
-    <input type="text" name="pseudo" id="pseudo">
+        <div class="mb-4 d-flex flex-row">
+            <label class="form-label me-4 col-4" for="last_name">Nom :</label>
+            <input class="form-control" type="text" name="last_name" id="last_name" required>
+        </div>
 
-    <label for="phone_number"> Numéro de téléphone :</label>
-    <input type="text" name="phone_number" id="phone_number">
+        <div class="mb-4 d-flex flex-row">
+            <label class="form-label me-4 col-4" for="first_name">Prénom :</label required>
+            <input class="form-control" type="text" name="first_name" id="first_name">
+        </div>
 
-    <label for="email">Adresse Email* :</label>
-    <input type="email" name="email" id="email">
+        <div class="mb-4 d-flex flex-row">
+            <label class="form-label me-4 col-4" for="pseudo">Pseudo :</label>
+            <input class="form-control" type="text" name="pseudo" id="pseudo">
+        </div>
 
-    <label for="street_address">Rue :</label>
-    <input type="text" name="street_address" id="street_address">
+        <div class="mb-4 d-flex flex-row">
+            <label class="form-label me-4 col-4" for="phone_number"> Numéro de téléphone :</label>
+            <input class="form-control" type="text" name="phone_number" id="phone_number">
+        </div>
 
-    <label for="number_address">Numéro :</label>
-    <input type="text" name="number_address" id="number_address">
+        <div class="mb-4 d-flex flex-row">
+            <label class="form-label me-4 col-4" for="email">Adresse Email* :</label>
+            <input class="form-control" type="email" name="email" id="email">
+        </div>
 
-    <label for="zip_address">Code Postal :</label>
-    <input type="text" name="zip_address" id="zip_address">
+        <div class="mb-4 d-flex flex-row">
+            <label class="form-label me-4 col-4" for="street_address">Rue :</label>
+            <input class="form-control" type="text" name="street_address" id="street_address">
+        </div>
 
-    <label for="city_address">Localité :</label>
-    <input type="text" name="city_address" id="city_address">
+        <div class="mb-4 d-flex flex-row">
+            <label class="form-label me-4 col-4" for="number_address">Numéro :</label>
+            <input class="form-control" type="text" name="number_address" id="number_address">
+        </div>
 
-    <button type="submit" name="create">Créer</button>
-</form>
+        <div class="mb-4 d-flex flex-row">
+            <label class="form-label me-4 col-4" for="zip_address">Code Postal :</label>
+            <input class="form-control" type="text" name="zip_address" id="zip_address">
+        </div>
+
+        <div class="mb-4 d-flex flex-row">
+            <label class="form-label me-4 col-4" for="city_address">Localité :</label>
+            <input class="form-control" type="text" name="city_address" id="city_address">
+        </div>
+
+        <button class="btn btn-primary w-100" type="submit" name="create">Créer</button>
+    </form>
+
+</div>

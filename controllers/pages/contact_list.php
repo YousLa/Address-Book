@@ -29,14 +29,36 @@ foreach ($contacts as $cle => $contact) {
 
     // Extraction des données d'un conte dans une variable
 
-    $contact_row .= "<li class='contact_card'>";
+    $contact_row .= "<div class='card mb-3' style='max-width: 540px;'>";
 
-    $contact_row .= "<img src='" . $contact['pic_url'] . "'>";
+    $contact_row .= "<div class='row g-0'>";
 
-    $contact_row .= "<h2><a href='?page=contactcard&id=" . htmlspecialchars($contact['id']) . "'>" . $contact['last_name'] . " " . $contact['first_name'] . "</a></h2>";
+    $contact_row .= "<div class='col-md-4 card-img-left ' ' style='object-fit: cover;'>";
 
+    $contact_row .= "<img class='img-fluid rounded-start height='100%  src='" . $contact['pic_url'] . "'>";
 
-    $contact_row .= "</li>";
+    $contact_row .= "</div>";
+
+    $contact_row .= "<div class='col-md-8'>";
+
+    $contact_row .= "<div class='card-body'>";
+
+    $contact_row .= "<h5><a class='card-title' href='?page=contactcard&id=" . htmlspecialchars($contact['id']) . "'>" . $contact['last_name'] . " " . $contact['first_name'] . "</a></h5>";
+
+    $contact_row .= " <p class='card-text'>Aperçu des infos</p>";
+
+    $contact_row .= " <p class='card-text'><small class='text-body-secondary'>Last updated 3 mins ago</small></p>";
+
+    $contact_row .= " <a href='?page=contactcard' class='btn btn-primary'>Afficher le contact</a>";
+
+    $contact_row .= " </div>";
+
+    $contact_row .= " </div>";
+
+    $contact_row .= " </div>";
+
+    $contact_row .= " </div>";
 }
+
 
 require_once 'views/pages/contact_list.php';

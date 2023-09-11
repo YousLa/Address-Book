@@ -3,7 +3,7 @@
 <?php
 
 
-//var_dump($_POST);
+// var_dump($_POST['check']);
 
 if (isset($_POST['login'])) {
 
@@ -41,7 +41,7 @@ if (isset($_POST['login'])) {
             $_SESSION['role'] = $arrayResult[0]['role'];
             $_SESSION['created_at'] = $arrayResult[0]['created_at'];
             $_SESSION['updated_at'] = $arrayResult[0]['updated_at'];
-            header('Location: ?page=home');
+            header('Location: ?page=contactlist');
         }
     }
 }
