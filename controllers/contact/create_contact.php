@@ -32,10 +32,7 @@ if (isset($_POST['create'], $_POST['last_name'], $_POST['first_name']) && !empty
 
         include_once "models/database.php";
 
-        $query = "
-INSERT INTO contact
-VALUES (NULL, :last_name, :first_name, :pseudo, :pic_name, :pic_url, :phone_number, :email, :street_address, :number_address, :zip_address, :city_address, :user_id, DEFAULT, DEFAULT)
-";
+        $query = " INSERT INTO contact VALUES (NULL, :last_name, :first_name, :pseudo, :pic_name, :pic_url, :phone_number, :email, :street_address, :number_address, :zip_address, :city_address, :user_id, DEFAULT, DEFAULT)";
 
         $objet = $database->prepare($query);
 
